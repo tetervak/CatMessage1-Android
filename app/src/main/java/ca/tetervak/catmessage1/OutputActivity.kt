@@ -19,14 +19,16 @@ class OutputActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // get and display the message data
-        val envelope = intent.getSerializableExtra(ENVELOPE) as Envelope
-        binding.messageText.text = envelope.textMessage
-        binding.isUrgentOutput.text =
-            if (envelope.isUrgent) {
-                getString(R.string.urgent)
-            } else {
-                getString(R.string.not_urgent)
-            }
+        val envelope = intent.getSerializableExtra(ENVELOPE) as Envelope?
+        envelope?.apply {
+            binding.isUrgentOutput.text =
+                if (isUrgent) {
+                    getString(R.string.urgent)
+                } else {
+                    getString(R.string.not_urgent)
+                }
+            binding.messageText.text = textMessage
+        }
 
         // make the close button work
         binding.backButton.setOnClickListener { finish() }
