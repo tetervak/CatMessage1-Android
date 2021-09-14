@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Cat Message 1</string>
+
+    <!-- radio button labels / output strings -->
+    <string name="cat_purr">Purr</string>
+    <string name="cat_mew">Mew</string>
+    <string name="cat_hiss">Hiss</string>
+
+    <!-- urgent / not urgent -->
+    <string name="urgent">Urgent</string>
+    <string name="not_urgent">Not Urgent</string>
+
+    <string name="select_message">Select a message</string>
+    <string name="message_label">Received message</string>
+    <string name="undefined">Undefined</string>
+
+    <!-- the button labels -->
+    <string name="send">Send</string>
+    <string name="back">Back</string>
+
+</resources>
